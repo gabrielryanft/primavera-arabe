@@ -6,17 +6,18 @@
     box-sizing: border-box;
 }
 
+:root{
+    --color_sec_1: rgb(90, 38, 38);
+    --height_cel: 80vh;
+    --height_nav: 2.5rem;
+}
+
 html{
     scroll-behavior: smooth;
 }
 
 body{
     background-color: rgb(87, 46, 46);
-}
-
-:root{
-    --color_sec_1: rgb(90, 38, 38);
-    --height_cel: 80vh;
 }
 
 ::-webkit-scrollbar{
@@ -50,14 +51,14 @@ body{
 
 #nav_sn > div{
     position: relative;
-    height: 1px;
+    height: 0px;
     width: 100%;
 
 }
 
 #nav_sn_absolute{
     position: absolute; 
-    top: -2px;
+    top: 0;
     left: 0;
     right: 0;
     height: 4rem;
@@ -67,7 +68,7 @@ body{
 #nav_sn_absolute:hover nav{
     pointer-events: all;
     opacity: 1;
-    height: 2rem;
+    height: var(--height_nav);
 }
 
 nav{
@@ -87,18 +88,20 @@ nav{
 nav > a{
     color: black;
     text-decoration: none;
-    display: inline-block;
-    height: 2rem;
-    width: 20%;
+    display: grid;
+    place-items: center;
     text-align: center;
-    line-height: 2rem;
+    min-height: var(--height_nav);
+    width: 20%;
+    line-height: 1rem;
+    padding: 0 .6rem;
     background-color: rgb(87, 46, 46);
     outline: 1px solid black;
 }
 
 nav > button{
     background-color: rgb(40, 104, 40);
-    height: 2rem;
+    min-height: var(--height_nav);
     cursor: pointer;
     width: 20%;
     border: none;
@@ -364,17 +367,18 @@ section:nth-child(2) > div:nth-child(1){
 }
 
 section:nth-child(2) > div:nth-child(2){
-    width: 80%;
-    height: 80%;
-    margin: auto;
+    width: 100%;
+    height: 100%;
     display: grid;   
     place-items: center;
 }
 
 section:nth-child(2) > div:nth-child(2) canvas{
+    display: flex;
+    min-width: 0;
+    min-height: 0;
     width: 330px;
     height: 450px;
-    object-fit: cover;
 }
 
 section:nth-child(3){
