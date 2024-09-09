@@ -1,2 +1,2 @@
-# primavera-arabe
- Trabalho de geografia (Escola) sobre a Primavera Árabe. (Eu não fiz a pesquisa sobre o tema, Somente o HTML, CSS e JS.)
+# Primavera Árabe
+ Trabalho de geografia do ensino médio sobre a Primavera Árabe. (Eu não fiz a pesquisa sobre o tema, somente o HTML, CSS e JS.)
